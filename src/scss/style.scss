@@ -1,7 +1,7 @@
 /*global*/
-@use './global/variables' as *;
-@use './global/reset';
-@use './global/fonts';
+@use './variables' as *;
+@use './reset';
+@use './fonts';
 @use './blocks/hiden';
 @use './blocks/header';
 @use './blocks/button-round';
