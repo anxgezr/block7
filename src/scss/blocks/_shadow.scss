@@ -1,0 +1,10 @@
+@use '../global/variables' as *;
+
+body.call-open .communication-menu--call,
+body.feedback-open .communication-menu--feedback {
+  box-shadow: -16px 0 52px $shadow;
+}
+
+body.menu-open .menu-sidebar {
+  box-shadow: 16px 0 52px $shadow;
+}

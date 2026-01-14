@@ -1,0 +1,28 @@
+@use '../global/variables' as *;
+.button-readmore__hide {
+  font-family: 'TT Lakes Medium';
+  display: flex;
+  margin: 8px 32px 11px 16px;
+  padding: 0;
+  padding-left: 32px;
+  height: 24px;
+  position: relative;
+  background-color: inherit;
+  font-size: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    background: url(../img/expand.svg) no-repeat center / contain;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  &.rotated::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}

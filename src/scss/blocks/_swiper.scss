@@ -1,0 +1,22 @@
+@import '/node_modules/swiper/swiper-bundle.css';
+@import '/node_modules/swiper/modules/pagination.css';
+
+.swiper {
+  margin-bottom: 9px;
+
+  &-slide {
+    width: auto;
+  }
+
+  &-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #dddddd;
+    opacity: 0.7;
+  }
+
+  &-pagination-bullet-active {
+    background: #b5b6bc;
+    opacity: 1;
+  }
+}

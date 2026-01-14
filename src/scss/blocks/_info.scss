@@ -1,0 +1,24 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  max-width: 1120px;
+  margin-bottom: 24px;
+
+  &__text {
+    max-height: 160px;
+    overflow: hidden;
+    text-overflow: clip;
+    line-height: 18px;
+    padding: 0 0 0 16px;
+    margin-top: 24px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    transition: max-height 0.6s ease;
+  }
+
+  &__text.expanded {
+    max-height: none;
+    overflow: visible;
+  }
+}

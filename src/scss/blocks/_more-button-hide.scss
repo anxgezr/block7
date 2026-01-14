@@ -1,0 +1,26 @@
+.more-button__hide {
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 39px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    background: url(../img/expand.svg) no-repeat center / 24px 24px;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+
+  &.rotated::before {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}

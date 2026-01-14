@@ -1,0 +1,27 @@
+@use '../global/variables' as *;
+
+.header {
+  height: 88px;
+  padding: 19px 0;
+  border-bottom: 1px solid #d9fff5;
+  background-color: white;
+  z-index: 1;
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1120px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+
+  &__navigation-logo {
+    flex-shrink: 0;
+  }
+
+  &__navigation-logo {
+    margin-right: auto;
+  }
+}

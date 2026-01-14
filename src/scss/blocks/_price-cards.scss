@@ -1,0 +1,42 @@
+@use '../global/variables' as *;
+
+.price-cards {
+  display: flex;
+  padding: 16px;
+  margin-bottom: 24px;
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    height: 200px;
+    padding: 16px;
+    margin: 0;
+    background: white;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  &__dt-text {
+    margin-bottom: 4px;
+    font-family: 'TT Lakes Medium';
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey;
+  }
+
+  &__dd-text {
+    margin: 0;
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 18px;
+    color: $text;
+  }
+}

@@ -1,0 +1,53 @@
+@use '../global/variables' as *;
+.button-round {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $pink;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  background-size: 50%;
+  flex-shrink: 0;
+
+  &--burger {
+    background-image: url(../img/burger.svg);
+    background-size: 18px 16px;
+  }
+
+  &--call {
+    background-image: url(../img/call.svg);
+    background-size: 18px 18px;
+  }
+
+  &--chat {
+    background-image: url(../img/chat.svg);
+    background-size: 20px 20px;
+  }
+
+  &--profile {
+    background-image: url(../img/profile.svg);
+    background-size: 20px 18px;
+  }
+
+  &--repair {
+    background-image: url(../img/repair.svg);
+    background-size: 20px 20px;
+  }
+
+  &--checkstatus {
+    background-image: url(../img/checkstatus.svg);
+    background-size: 16px 20px;
+  }
+
+  &--close {
+    background-image: url(../img/close.svg);
+    background-size: 16px 16px;
+  }
+
+  &--search {
+    background-image: url(../img/search.svg);
+    background-size: 17px 17px;
+    margin-left: auto;
+  }
+}

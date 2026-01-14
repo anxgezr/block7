@@ -1,0 +1,37 @@
+.brands-list__logo {
+  object-fit: contain;
+  object-position: left center;
+
+  &--lenovo {
+    width: 108px;
+    height: 32px;
+  }
+  &--samsung {
+    width: 116px;
+    height: 38px;
+  }
+  &--apple {
+    width: 44px;
+    height: 44px;
+  }
+  &--viewsonic {
+    width: 120px;
+    height: 21px;
+  }
+  &--bosch {
+    width: 120px;
+    height: 28px;
+  }
+  &--hp {
+    width: 52px;
+    height: 52px;
+  }
+  &--acer {
+    width: 94px;
+    height: 24px;
+  }
+  &--sony {
+    width: 120px;
+    height: 25px;
+  }
+}

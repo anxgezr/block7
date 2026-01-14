@@ -1,0 +1,57 @@
+@use './fonts';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+dl,
+dt,
+dd {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'TT Lakes';
+  background: #f8f8f8;
+  color: #1b1c21;
+  font-size: 16px;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+}

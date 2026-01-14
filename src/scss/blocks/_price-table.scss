@@ -1,0 +1,96 @@
+@use '../global/variables' as *;
+
+.price-table {
+  width: 100%;
+  min-width: auto;
+  max-width: 1056px;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: auto;
+
+  &--head {
+    background: $background;
+    overflow: hidden;
+
+    thead {
+      tr {
+        font-family: 'TT Lakes Medium';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      th {
+        padding: 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $grey;
+        text-align: left;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding: 16px 0;
+        }
+      }
+    }
+  }
+
+  &--body {
+    background: white;
+    margin-top: -1px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    tbody {
+      tr {
+        position: relative;
+
+        /* Разделительная линия */
+        &::after {
+          content: '';
+          position: absolute;
+          left: 16px;
+          right: 16px;
+          bottom: 0;
+          height: 1px;
+          background-color: $marble;
+        }
+
+        &:last-child::after {
+          display: none;
+        }
+      }
+    }
+
+    td {
+      padding: 13px 0;
+      padding-left: 24px;
+      font-size: 14px;
+      vertical-align: middle;
+      white-space: nowrap;
+
+      &:first-child {
+        padding: 13px 0 13px 16px;
+      }
+
+      &:last-child {
+        width: 119px;
+        padding: 13px 16px 13px 24px;
+        text-align: right;
+      }
+    }
+  }
+
+  &__title {
+    width: 50%;
+  }
+
+  &__order {
+    width: 119px;
+    height: 32px;
+    border: none;
+    background: url('../img/order.svg') no-repeat center;
+    cursor: pointer;
+  }
+}

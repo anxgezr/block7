@@ -1,0 +1,64 @@
+@use '../global/variables' as *;
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: $overlay;
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+body.menu-open .menu-sidebar {
+  transform: translateX(0);
+}
+
+body.menu-open .menu-overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body.menu-open .menu-overlay,
+body.call-open .menu-overlay,
+body.feedback-open .menu-overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+body.call-open .header,
+body.call-open .main,
+body.call-open .footer,
+body.feedback-open .header,
+body.feedback-open .main,
+body.feedback-open .footer {
+  filter: blur(4px) grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+body.call-open .menu-sidebar,
+body.feedback-open .menu-sidebar {
+  filter: blur(4px) grayscale(20%);
+  pointer-events: none;
+  transition: filter 0.3s ease;
+}
+
+body.call-open,
+body.feedback-open {
+  overflow: hidden;
+}
+
+/*Появление модалок*/
+
+body.call-open .communication-menu--call {
+  transform: translateX(0);
+}
+
+body.feedback-open .communication-menu--feedback {
+  transform: translateX(0);
+}

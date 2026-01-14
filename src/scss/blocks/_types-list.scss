@@ -1,0 +1,10 @@
+.types-list {
+  display: flex;
+  padding: 16px;
+  margin-bottom: 24px;
+
+  &__item {
+    flex: 0 0 240px;
+    height: 160px;
+  }
+}

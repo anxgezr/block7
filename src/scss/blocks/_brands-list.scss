@@ -1,0 +1,41 @@
+@use '../global/variables' as *;
+
+.brands,
+.tech {
+  max-width: 1065px;
+  margin: 0 auto;
+}
+
+.brands-list {
+  display: flex;
+  max-height: 150px;
+  padding: 16px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex: 0 0 240px;
+    height: 72px;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border: 1px solid $marble;
+    border-radius: 6px;
+    padding: 0 16px;
+    margin-bottom: 24px;
+  }
+  /*Стрелка внутри карточек*/
+  &__button {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: url('../img/go.svg') no-repeat center;
+    flex-shrink: 0;
+  }
+}

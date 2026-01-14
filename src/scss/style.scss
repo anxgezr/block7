@@ -1,0 +1,339 @@
+/*global*/
+@use './global/variables' as *;
+@use './global/reset';
+@use './global/fonts';
+@use './blocks/hiden';
+@use './blocks/header';
+@use './blocks/button-round';
+@use './blocks/divider';
+@use './blocks/main';
+@use './blocks/navigation-menu';
+@use './blocks/navigation-item';
+@use './blocks/info';
+@use './blocks/button-readmore-hide';
+@use './blocks/swiper';
+@use './blocks/title';
+@use './blocks/after-effect-container';
+@use './blocks/brands-list';
+@use './blocks/brands-list-logo';
+@use './blocks/more-button-hide';
+@use './blocks/button-square';
+@use './blocks/types-list';
+@use './blocks/price-cards';
+@use './blocks/order-button';
+@use './blocks/offer';
+@use './blocks/footer';
+@use './blocks/menu-sidebar';
+@use './blocks/menu-footer';
+@use './blocks/langs';
+@use './blocks/opacity';
+@use './blocks/menu-overlay';
+@use './blocks/communication-menu';
+@use './blocks/send-button';
+@use './blocks/modal-open';
+@use './blocks/shadow';
+@use './blocks/price-table';
+
+/*Адаптив*/
+@media (min-width: 768px) {
+  .header__actions,
+  .divider--first,
+  .more-button {
+    display: inline;
+  }
+
+  .main {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .title {
+    padding: 16px 24px;
+  }
+
+  .main__table-price {
+    display: block;
+  }
+
+  /*Прячем*/
+  #SwiperThird {
+    display: none;
+  }
+
+  .header__actions {
+    display: flex;
+    gap: 20px;
+  }
+  .header {
+    padding: 19px 8px;
+  }
+  main {
+    padding: 24px 0 40px 0;
+  }
+
+  .main__header-wrap {
+    padding-bottom: 24px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+    margin-top: 30px;
+    padding: 0 25px 0 16px;
+  }
+
+  .info__content {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+  }
+
+  .info__text {
+    margin: 0;
+    line-height: 20px;
+  }
+
+  .info__text p {
+    margin-bottom: 20px;
+  }
+
+  .info__img {
+    width: 47%;
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+
+  .info__img img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /*бренды*/
+
+  .brands-list__item {
+    flex: 0 0 224px;
+  }
+
+  .brands-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 224px);
+    max-width: 100%;
+    row-gap: 16px;
+    column-gap: 24px;
+    padding: 24px 24px 0 24px;
+    max-height: 190px;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    box-sizing: border-box;
+  }
+
+  .brands-list.expanded {
+    max-height: 1000px;
+  }
+
+  .brands-list__item {
+    margin-bottom: 0;
+  }
+
+  li.brands-list__item:nth-child(4) {
+    order: 1;
+  }
+
+  /*Виды техники*/
+  .button-square {
+    width: 224px;
+  }
+
+  .types-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 224px);
+    max-width: 100%;
+    row-gap: 16px;
+    column-gap: 24px;
+    padding: 24px 24px 0 24px;
+    max-height: 190px;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .types-list.expanded {
+    max-height: 1000px;
+  }
+
+  /*подвал*/
+  .footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    padding: 32px 24px 24px 24px;
+    column-gap: 35px;
+  }
+
+  .offer {
+    padding: 0 24px;
+  }
+
+  .footer__copyright {
+    width: 218px;
+    text-align: left;
+  }
+
+  .footer__privacy {
+    width: 214px;
+  }
+
+  .footer__info {
+    width: 213px;
+    text-align: right;
+  }
+}
+
+@media (min-width: 1016px) {
+  li.brands-list__item:nth-child(4) {
+    order: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  #closeBurgerMenu,
+  .header,
+  .navigation__menu::before,
+  .navigation__menu::after,
+  .after-effect-container::before,
+  .after-effect-container::after {
+    display: none;
+  }
+
+  .main,
+  .footer {
+    max-width: 1120px;
+    margin-left: 320px;
+  }
+
+  .main__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 33px;
+    margin-left: 456px;
+    margin-right: 20px;
+  }
+
+  .main__button {
+    font-family: 'TT Lakes Medium';
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+
+  .navigation__menu {
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 0 16px;
+  }
+
+  .info {
+    margin-top: 7px;
+  }
+
+  .title {
+    padding: 16px 24px;
+  }
+
+  .main__header {
+    position: relative;
+    margin: 0;
+    padding-left: 16px;
+  }
+
+  .main__header-wrap {
+    padding-bottom: 8px;
+  }
+
+  .menu-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 100vh;
+    padding: 24px 24px 0;
+    background-color: #ffffff;
+    box-shadow: none;
+    transform: none;
+    z-index: 10;
+  }
+
+  .menu-sidebar__link:hover::before {
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .footer__info {
+    width: 330px;
+  }
+
+  .brands,
+  .tech {
+    margin: 0 16px;
+  }
+  .types-list,
+  .brands-list {
+    column-gap: 32px;
+    grid-template-columns: repeat(4, 240px);
+    max-width: none;
+    padding-left: 8px;
+  }
+
+  .brands-list__item,
+  .button-square {
+    flex: 0 0 240px;
+    width: 240px;
+  }
+
+  .offer {
+    padding: 0 32px;
+  }
+
+  /*Модалка*/
+
+  .communication-menu {
+    width: 440px;
+    border-left: #d9fff5 1px solid;
+    transform: translateX(calc(100vw + 110px));
+    transition: transform 0.35s ease;
+  }
+
+  .communication-menu__wrapper {
+    position: relative;
+  }
+
+  .communication-menu__close {
+    padding: 0;
+    position: absolute;
+    top: 32px;
+    left: 24px;
+    transform: translateX(-110px);
+  }
+
+  .communication-menu__title::before {
+    left: -18px;
+    width: 3px;
+    height: 40px;
+    background: url(../img/thin-highlight.svg) no-repeat center;
+  }
+
+  body.feedback-open .communication-menu--feedback,
+  body.call-open .communication-menu--call {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,19 @@
+.button-round,
+.lang__button,
+.brands-list__button,
+.price-table__order,
+.button-square__go,
+.order-button,
+.button-order,
+.offer__button,
+.send-button {
+  transition: opacity 0.3s ease;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,91 @@
+@use '../global/variables' as *;
+
+.menu-sidebar {
+  position: fixed;
+  flex-direction: column;
+  font-family: 'TT Lakes Medium';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  min-width: 320px;
+  max-width: 360px;
+  min-height: 100vh;
+  padding: 0 24px;
+  background: white;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+
+  &__wrapper {
+    font-family: 'TT Lakes Medium';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  &__header {
+    display: flex;
+    height: 51px;
+    align-items: center;
+    margin: 0;
+    padding-top: 18px;
+  }
+
+  &__logo {
+    height: 51px;
+    width: 97px;
+    margin-right: 62px;
+  }
+
+  &__actions {
+    display: flex;
+    width: 100%;
+    height: 51px;
+    gap: 16px;
+  }
+
+  &__nav {
+    position: relative;
+  }
+
+  &__nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: clamp(20px, 5vh, 45px);
+  }
+
+  &__item {
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  &__link {
+    position: relative;
+    color: $text;
+    transition: color 0.2s ease;
+  }
+
+  &__link:hover {
+    color: $grey;
+  }
+
+  &__link:hover::before {
+    content: '';
+    background-image: url(../img/highlight.svg);
+    background-size: 100% 100%;
+    width: 4px;
+    height: 32px;
+    position: absolute;
+    left: -24px;
+    transform: translateY(-5px);
+  }
+}

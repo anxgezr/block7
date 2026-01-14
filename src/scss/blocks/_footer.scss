@@ -1,0 +1,23 @@
+@use '../global/variables' as *;
+.footer {
+  font-family: 'TT Lakes Medium';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: $grey;
+  border-top: 1px solid $mint;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 16px;
+  row-gap: 16px;
+  z-index: 1;
+
+  &__privacy {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  &__privacy:hover {
+    color: $pink;
+  }
+}

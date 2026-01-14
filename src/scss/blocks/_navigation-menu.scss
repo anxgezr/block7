@@ -1,0 +1,33 @@
+@use '../global/variables' as *;
+
+.navigation__menu {
+  display: flex;
+  padding-right: 16px;
+  overflow-x: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 40px;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(to right, $alabaster, transparent);
+    background: -webkit-linear-gradient(to right, $alabaster, transparent);
+    background: -moz-linear-gradient(to right, $alabaster, transparent);
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 40px;
+    right: 0;
+    pointer-events: none;
+    background: linear-gradient(to left, $alabaster, transparent);
+    background: -webkit-linear-gradient(to left, $alabaster, transparent);
+    background: -moz-linear-gradient(to left, $alabaster, transparent);
+    z-index: 0;
+  }
+}
